@@ -68,8 +68,8 @@ function getVideos(){
    items.push( "Title : " + val["title"] + "<br />");
    items.push( "Uploaded by: " + val["publisher"] + "<br />");
    items.push( "Genre: "+ val["genre"]+"<br />");
-   items.push( "Rating: " + val["ageRating"]);
-   items.push( '<button type="button" class="btn btn-primary" onClick="deleteAssest"(\''+val["id"]+'\')">Delete</button> <br/><br/>');
+   items.push( "Rating: " + val["ageRating"]+"<br />");
+   items.push( '<button onClick="deleteAsset"(\''+val["id"]+'\')">Delete</button> <br/><br/>');
    items.push( "<hr />");
    });
    //Clear the assetlist div
