@@ -5,7 +5,7 @@
 
     <title>Notflix</title>
     <a href="/.auth/login/github">Log in with GitHub</a>
-    <a href="/.auth/logout">Log out</a>
+    <a href="/.auth/logout">Log out</a> 
 
       <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
       <script type="text/javascript" src="JS/bootstrap.js"></script>
@@ -35,7 +35,6 @@
               <!--New Asset Box-->
               <div class="row align-items-start">
                   <div class="col-2"  ></div>
-
                   <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
                     <p>Add Video</p>
 
@@ -75,6 +74,9 @@
           </div>
         </div>
         <script>
+          if (HelpCenter.user.role=="creator"){
+             $("div.anonymous").show();
+          }
           function openForm() {
             document.getElementById("popupForm").style.display = "block"; 
           }
@@ -89,7 +91,9 @@
             <div class="col-8" style="text-align: left;" >
               <div style="padding:5px;">
                 <button  id = "retVideos" type="button" class="btn btn-primary">View Videos</button>
-                <button class="btn btn-primary" onclick="openForm()">Add a Video</button>
+                <div class="creator">
+                  <button class="btn btn-primary" onclick="openForm()">Add a Video</button>
+                </div>
               </div>
               <div id="VideoList">
                 
