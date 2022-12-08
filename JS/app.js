@@ -1,7 +1,7 @@
 //The URIs of the REST endpoint
 AUPS = "https://prod-16.uksouth.logic.azure.com:443/workflows/3766a0c05bdc45a6b866cb35a785d5fa/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2N4Imhjf4x4xDQqN-DimtVkzzPTBUKcGsTQsckAcI1k";
 RAA = "https://prod-12.uksouth.logic.azure.com:443/workflows/434582bdc4284ca5b85b86f99d90d00f/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=RWj02DLZ6gCu2hoe-DPkLmGkQs6CSSQpRJineO7sqTY";
-DIAURI0 = "https://prod-21.uksouth.logic.azure.com/workflows/f0272b3654374c7095b154c269eb9054/triggers/manual/paths/invoke/";
+DIAURI0 = "https://prod-21.uksouth.logic.azure.com/workflows/f0272b3654374c7095b154c269eb9054/triggers/manual/paths/invoke/rest/v1/video/";
 DIAURI1 = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=r6QDwgf04az3Dswc84OOybYX3iO_rAC_QzpD-Pg0SBE";
 
 BLOB_ACCOUNT = "https://b00585717blobstorage.blob.core.windows.net";
