@@ -4,25 +4,6 @@
     <meta charset="UTF-8">
 
     <title>Notflix</title>
-    <script>
-      async function getUserInfo() {
-        const response = await fetch('/.auth/me');
-        const payload = await response.json();
-        const { clientPrincipal } = payload;
-        return clientPrincipal;
-      }
-    </script>
-
-<script type="text/javascript">
-  var myVar="hello";
-  async function getUserInfo() {
-        const response = await fetch('/.auth/me');
-        const payload = await response.json();
-        const { clientPrincipal } = payload;
-        return clientPrincipal;
-      }
-  </script>
-    <input type = "button" onclick = getUserInfo() value = "Display">
       <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
       <script type="text/javascript" src="JS/bootstrap.js"></script>
       <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
@@ -58,7 +39,7 @@
 
             <div class="col-8" style="text-align: left;" >
               <div style="padding:5px;">
-                <button type="button" style="background-color:green; border: green;" class="btn btn-primary"a href="/.auth/login/github?post_login_redirect_uri=https://calm-smoke-08aa83b03.2.azurestaticapps.net/authIndex.html">Login</a>
+                <button type="button" style="background-color:green; border: green;" class="btn btn-primary" a href="/.auth/login/github?post_login_redirect_uri=https://calm-smoke-08aa83b03.2.azurestaticapps.net/authIndex.html">Login</a>
               </div>
               <div style="padding:5px;">
                 <button  id = "retVideos" type="button" class="btn btn-primary">View Videos</button>
