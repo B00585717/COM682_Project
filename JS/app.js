@@ -69,7 +69,7 @@ function getVideos(){
    items.push( "Uploaded by: " + val["publisher"] + "<br />");
    items.push( "Genre: "+ val["genre"]+"<br />");
    items.push( "Rating: " + val["ageRating"]+"<br />");
-   items.push( '<button onClick="deleteAsset"(\''+val["id"]+'\')">Delete</button> <br/><br/>');
+   items.push( '<button type="button" onClick="deleteAsset(\''+val["id"]+'\')">Delete</button> <br/><br/>');
    items.push( "<hr />");
    });
    //Clear the assetlist div
