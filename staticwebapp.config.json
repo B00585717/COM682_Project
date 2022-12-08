@@ -1,0 +1,16 @@
+{
+    "routes": [
+        {
+            "route": "/example",
+            "rewrite": "/example.html"
+        },
+        {
+            "route": "/index.html",
+            "allowedRoles": ["creator"]
+        },
+        {
+            "route": "/.auth/login/github",
+            "allowedRoles": ["null"]
+        }
+    ]
+}

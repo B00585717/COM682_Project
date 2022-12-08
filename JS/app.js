@@ -51,9 +51,7 @@ function submitNewAsset(){
     success: function(data){}
   });
 }
-  
 
-//A function to get a list of all the assets and write them to the Div with the AssetList Div
 function getVideos(){
 
   //Replace the current HTML in that div with a loading message
@@ -71,7 +69,7 @@ function getVideos(){
    items.push( "Uploaded by: " + val["publisher"] + "<br />");
    items.push( "Genre: "+ val["genre"]+"<br />");
    items.push( "Rating: " + val["ageRating"]);
-   //items.push( "<button onclick=" + deleteAsset(val["fileLocator"]) + ">Click me</button>")
+   items.push( '<button type="button" class="btn btn-primary" onClick="deleteAssest"(\''+val["id"]+'\')">Delete</button> <br/><br/>');
    items.push( "<hr />");
    });
    //Clear the assetlist div
