@@ -5,7 +5,7 @@
             "rewrite": "/example.html"
         },
         {
-            "route": "/index.html",
+            "route": "/authIndex.html",
             "allowedRoles": ["creator"]
         },
         {
