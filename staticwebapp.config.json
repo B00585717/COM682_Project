@@ -1,16 +1,12 @@
 {
     "routes": [
         {
-            "route": "/example",
-            "rewrite": "/example.html"
-        },
-        {
             "route": "/authIndex.html",
-            "allowedRoles": ["creator"]
+            "allowedRoles": ["authenticated"]
         },
         {
             "route": "/.auth/login/github",
-            "allowedRoles": ["null"]
+            "redirect": "/authIndex"
         }
     ]
 }
