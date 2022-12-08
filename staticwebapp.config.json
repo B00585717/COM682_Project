@@ -3,10 +3,6 @@
         {
             "route": "/authIndex.html",
             "allowedRoles": ["authenticated"]
-        },
-        {
-            "route": "/.auth/login/github",
-            "redirect": "/authIndex"
         }
     ]
 }
