@@ -17,6 +17,13 @@ $(document).ready(function() {
 
   }); 
 
+  $("#userretVideos").click(function(){
+
+    //Run the get asset list function
+    getUserVideos();
+
+}); 
+
    //Handler for the new asset submission button
   $("#subNewForm").click(function(){
 
@@ -78,6 +85,32 @@ function getVideos(){
    $( "<ul/>", {"class": "my-new-list",html: items.join("")}).appendTo("#VideoList");
    });
   }
+
+  function getUserVideos(){
+
+    //Replace the current HTML in that div with a loading message
+     $('#userVideoList').html('<div class="spinner-border" role="status"><span class="sr-only"> &nbsp;</span>');
+     $.getJSON(RAA, function( data ) {
+  
+     //Create an array to hold all the retrieved assets
+     var items = [];
+    
+     //Iterate through the returned records and build HTML, incorporating the key values of the record in the data
+     $.each( data, function( key, val ) {
+     items.push( "<hr />");
+     items.push( "<video src='" + BLOB_ACCOUNT + val["filePath"] +"' width='750' autoplay /></video> <br />")
+     items.push( "Title : " + val["title"] + "<br />");
+     items.push( "Uploaded by: " + val["publisher"] + "<br />");
+     items.push( "Genre: "+ val["genre"]+"<br />");
+     items.push( "Rating: " + val["ageRating"]+"<br />");
+     items.push( "<hr />");
+     });
+     //Clear the assetlist div
+     $('#userVideoList').empty();
+     //Append the contents of the items array to the VideoList Div
+     $( "<ul/>", {"class": "my-new-list",html: items.join("")}).appendTo("#userVideoList");
+     });
+    }
 
   function deleteAsset(id){
     $.ajax({
